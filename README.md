@@ -16,7 +16,7 @@ We use *TF-IDF Vectorization* for feature extraction and train multiple ML model
 ---
 
 ## 📂 Dataset  
-We use the *Fake News Dataset* from [Kaggle Fake News Challenge](https://www.kaggle.com/c/fake-news).  
+We use the *Fake News Dataset* from [Kaggle Fake News Detection](https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets).  
 
 - Columns: id, title, author, text, label  
 - Target: label (0 = Real, 1 = Fake)  
