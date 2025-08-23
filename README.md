@@ -88,12 +88,14 @@ Add WordCloud visualization for Fake vs Real articles.
 ---
 
 📌 Project Structure
+```bash
 
 📁 Fake-News-Detection
 │── 📄 Fake_News_Detection.ipynb   # Main Notebook
 │── 📄 train.csv                   # Dataset (from Kaggle)
 │── 📄 requirements.txt            # Dependencies
 │── 📄 README.md                   # Project Documentation
+```
 
 👨‍💻 Author
 
