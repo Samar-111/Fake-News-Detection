@@ -45,10 +45,14 @@ Click the badge above ☝ to open in *Google Colab*.
    git clone https://github.com/Samar-111/Fake-News-Detection.git
    cd Fake-News-Detection
 2.Install dependencies:
-   pip install -r requirements.txt
+   ```bash
+ pip install -r requirements.txt
+```
 3.Run the Jupyter Notebook:
  
+```bash
 jupyter notebook Fake_News_Detection.ipynb
+```
 
 📊 Results
 
