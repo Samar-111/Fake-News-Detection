@@ -69,7 +69,7 @@ Accuracy, Precision, Recall, F1-Score
 
 Confusion Matrix (Heatmap)
 
-ROC Curve & AUC Score
+AUC and ROC score
 
 
 
