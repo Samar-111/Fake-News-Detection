@@ -1,0 +1,27 @@
+{
+  "initial_records": 13600,
+  "final_records": 12366,
+  "duplicates_removed": 1234,
+  "class_distribution": {
+    "real_articles": 4865,
+    "fake_articles": 7501,
+    "imbalance_ratio": 1.5418
+  },
+  "length_statistics": {
+    "avg_char_count": 2583.04,
+    "median_char_count": 2414.0,
+    "avg_word_count": 426.14,
+    "median_word_count": 401.0,
+    "min_word_count": 14,
+    "max_word_count": 7202
+  },
+  "top_publishers": {
+    "Independent / Web Source": 4977,
+    "Reuters": 4772,
+    "Alternative Wire / Blog": 2500,
+    "CNN": 113,
+    "Associated Press": 2,
+    "BBC": 1,
+    "WorldTruthDaily": 1
+  }
+}

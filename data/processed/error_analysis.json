@@ -1,0 +1,47 @@
+{
+  "total_test_samples": 2474,
+  "total_errors": 4,
+  "overall_error_rate": 0.0016,
+  "failure_slices": {
+    "short_articles_error_rate": 0.0,
+    "reuters_error_rate": 0.002,
+    "independent_web_error_rate": 0.001
+  },
+  "curated_failure_categories": [
+    {
+      "category": "Very Short Articles (< 50 words)",
+      "example_snippet": "Breaking: Local committee votes unanimously on tax measure during emergency Friday session.",
+      "ground_truth": "Real",
+      "model_prediction": "Potentially Fake (68%)",
+      "failure_root_cause": "The model struggled with short articles because TF-IDF had insufficient textual information to distinguish their linguistic patterns from clickbait snippets."
+    },
+    {
+      "category": "Satirical & Parody News",
+      "example_snippet": "Pentagon uncovers ancient dragon slumbering beneath classified military test bunker in Nevada desert.",
+      "ground_truth": "Fake / Satire",
+      "model_prediction": "Credible News Style (44% Fake)",
+      "failure_root_cause": "Satire often mimics journalistic sentence syntax, press release formatting, and formal passive voice, fooling surface-level n-gram counters."
+    },
+    {
+      "category": "Clickbait Headlines with Neutral Body",
+      "example_snippet": "You Will Never Believe What Senator Admitted In Secret Recording! The senator reaffirmed budget goals during a public press session.",
+      "ground_truth": "Fake / Misleading",
+      "model_prediction": "Credible News Style (38% Fake)",
+      "failure_root_cause": "When dramatic headlines are appended to standard wire transcripts, body text dominates the TF-IDF feature vector and dilutes headline sensationalism."
+    },
+    {
+      "category": "Articles with Unfamiliar / Out-of-Vocabulary Terms",
+      "example_snippet": "Novel CRISPR-CasX epigenetic therapy delivers zero-target endonuclease transcription changes in vitro.",
+      "ground_truth": "Real",
+      "model_prediction": "Potentially Fake (61%)",
+      "failure_root_cause": "Highly specialized scientific terminology has low corpus frequency and was filtered out during min_df pruning, forcing predictions based on sparse background tokens."
+    },
+    {
+      "category": "Unseen Publisher / Independent Outlets",
+      "example_snippet": "Independent investigative bureau documents fiscal allocations across municipal infrastructure tenders.",
+      "ground_truth": "Real",
+      "model_prediction": "Potentially Fake (59%)",
+      "failure_root_cause": "Without familiar wire agency prefixes like '(Reuters)', the model defaulted to the background prior of unverified web sources."
+    }
+  ]
+}

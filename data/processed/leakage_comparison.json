@@ -1,0 +1,30 @@
+{
+  "random_split": {
+    "split_strategy": "Random Split (Standard 80/20)",
+    "train_size": 9892,
+    "test_size": 2474,
+    "accuracy": 0.9883,
+    "f1_score": 0.9903,
+    "roc_auc": 0.999,
+    "leakage_risk": "High. The model memorizes publisher idiosyncrasies (e.g. wire formats) present across both splits."
+  },
+  "source_based_split": {
+    "split_strategy": "Source-Based Split (Grouped by Publisher)",
+    "train_size": 9864,
+    "test_size": 2502,
+    "accuracy": 0.9033,
+    "f1_score": 0.9492,
+    "roc_auc": NaN,
+    "leakage_risk": "Zero publisher leakage. Evaluates true linguistic generalization to previously unseen newsrooms."
+  },
+  "time_based_split": {
+    "split_strategy": "Time-Based Split (Temporal Train/Test)",
+    "train_size": 9900,
+    "test_size": 2466,
+    "accuracy": 0.9071,
+    "f1_score": 0.9513,
+    "roc_auc": 0.9529,
+    "leakage_risk": "Zero temporal leakage. Tests robustness against evolving political narratives and temporal shift."
+  },
+  "core_finding": "Standard random splitting inflates apparent accuracy because models latch onto publisher-specific tokens. Source-based splitting reveals genuine out-of-domain generalization performance."
+}
